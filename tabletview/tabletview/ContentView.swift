@@ -6,19 +6,29 @@
 //
 
 import SwiftUI
+import ClerkKit
+import ClerkKitUI
 
 struct ContentView: View {
+    @Environment(Clerk.self) private var clerk
+    @State private var authIsPresented = false
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            UserButton(signedOutContent: {
+                Button("Sign in") {
+                    authIsPresented = true
+                }
+            })
         }
-        .padding()
+        .prefetchClerkImages()
+        .sheet(isPresented: $authIsPresented) {
+            AuthView()
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .environment(Clerk.shared)
 }

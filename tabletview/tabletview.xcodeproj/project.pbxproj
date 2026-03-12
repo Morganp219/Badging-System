@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		816DE2052F59F44F0057CF20 /* ClerkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 816DE2042F59F44F0057CF20 /* ClerkKit */; };
+		816DE2072F59F44F0057CF20 /* ClerkKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 816DE2062F59F44F0057CF20 /* ClerkKitUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		81FA99922F59D8AC00E0FC85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816DE2052F59F44F0057CF20 /* ClerkKit in Frameworks */,
+				816DE2072F59F44F0057CF20 /* ClerkKitUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = tabletview;
 			packageProductDependencies = (
+				816DE2042F59F44F0057CF20 /* ClerkKit */,
+				816DE2062F59F44F0057CF20 /* ClerkKitUI */,
 			);
 			productName = tabletview;
 			productReference = 81FA99842F59D8AB00E0FC85 /* tabletview.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = 81FA997B2F59D8AB00E0FC85;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				816DE2032F59F44F0057CF20 /* XCRemoteSwiftPackageReference "clerk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 81FA99852F59D8AB00E0FC85 /* Products */;
 			projectDirPath = "";
@@ -393,8 +405,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = tabletview/tabletview.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E8QARB2U57;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -407,7 +421,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.fhnw.tabletview;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foxpupstudios.badging.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -424,8 +438,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = tabletview/tabletview.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E8QARB2U57;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -438,7 +454,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.fhnw.tabletview;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foxpupstudios.badging.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -570,6 +586,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		816DE2032F59F44F0057CF20 /* XCRemoteSwiftPackageReference "clerk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clerk/clerk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		816DE2042F59F44F0057CF20 /* ClerkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 816DE2032F59F44F0057CF20 /* XCRemoteSwiftPackageReference "clerk-ios" */;
+			productName = ClerkKit;
+		};
+		816DE2062F59F44F0057CF20 /* ClerkKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 816DE2032F59F44F0057CF20 /* XCRemoteSwiftPackageReference "clerk-ios" */;
+			productName = ClerkKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81FA997C2F59D8AB00E0FC85 /* Project object */;
 }
